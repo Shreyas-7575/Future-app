@@ -295,7 +295,7 @@ const QuizPage = ({ onComplete, onBack }) => {
           style={{
             position: 'absolute',
             left: 0,
-            top: '-8px',
+            top: '-16px',
             display: 'flex',
             alignItems: 'center',
             gap: '8px',
