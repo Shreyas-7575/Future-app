@@ -289,28 +289,32 @@ const QuizPage = ({ onComplete, onBack }) => {
       margin: '0 auto',
       paddingBottom: '300px'
     }}>
-      <div style={{ position: 'relative', marginBottom: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <button 
-          onClick={onBack}
-          style={{
-            position: 'absolute',
-            left: 0,
-            top: '-100px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '10px',
-            opacity: 0.8,
-            transition: 'opacity 0.2s',
-            background: 'none',
-            border: 'none',
-            color: 'inherit',
-            cursor: 'pointer'
-          }}
-          className="btn-secondary"
-        >
-          <ArrowLeft size={55} /> Back
-        </button>
+      <button 
+        onClick={onBack}
+        style={{
+          position: 'fixed',
+          top: '30px',
+          left: '30px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px',
+          opacity: 0.8,
+          transition: 'opacity 0.2s',
+          background: 'rgba(255, 255, 255, 0.1)',
+          backdropFilter: 'blur(10px)',
+          padding: '10px 15px',
+          borderRadius: '12px',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
+          color: 'inherit',
+          cursor: 'pointer',
+          zIndex: 1000
+        }}
+        className="btn-secondary"
+      >
+        <ArrowLeft size={30} /> <span>Back</span>
+      </button>
 
+      <div style={{ position: 'relative', marginBottom: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <h1 style={{ 
           background: 'linear-gradient(to right, var(--primary-color), var(--accent-color))',
           WebkitBackgroundClip: 'text',
