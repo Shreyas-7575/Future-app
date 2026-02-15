@@ -292,22 +292,18 @@ const QuizPage = ({ onComplete, onBack }) => {
       <div style={{ position: 'relative', marginBottom: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <button 
           onClick={onBack}
+          className="btn-secondary"
           style={{
             position: 'absolute',
             left: 0,
             display: 'flex',
             alignItems: 'center',
-            gap: '8px',
-            opacity: 0.8,
-            transition: 'opacity 0.2s',
-            background: 'none',
-            border: 'none',
-            color: 'inherit',
-            cursor: 'pointer'
+            gap: '10px',
+            padding: '12px 20px',
+            fontSize: '1.1rem'
           }}
-          className="btn-secondary"
         >
-          <ArrowLeft size={24} /> Back
+          <ArrowLeft size={28} /> Back
         </button>
 
         <h1 style={{ 
