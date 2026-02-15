@@ -110,9 +110,6 @@ function App() {
               <p><strong>Developer:</strong> Shreyas Patel</p>
               <p><strong>Founder:</strong> Dhyan Patel</p>
               <p><strong>Co-Founder:</strong> Dhruv Panchal</p>
-              <p style={{ marginTop: '15px' }}>
-                Built with React & Passion to help students decide their future.
-              </p>
             </div>
           )
         };
