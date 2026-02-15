@@ -50,8 +50,8 @@ const ResultPage = ({ scores, onNext }) => {
       
       <div className="glass" style={{ 
         width: '100%', 
-        height: '450px', 
-        padding: '30px',
+        height: '400px', 
+        padding: '20px',
         marginBottom: '40px',
         display: 'flex',
         justifyContent: 'center',
@@ -63,12 +63,11 @@ const ResultPage = ({ scores, onNext }) => {
               data={data}
               cx="50%"
               cy="50%"
-              labelLine={true}
-              outerRadius={130}
+              labelLine={false}
+              outerRadius={120}
               fill="#8884d8"
               dataKey="value"
               label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-              labelStyle={{ fill: '#fff', fontSize: '16px', fontWeight: 'bold' }}
             >
               {data.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={COLORS[entry.name]} />
@@ -78,7 +77,7 @@ const ResultPage = ({ scores, onNext }) => {
               contentStyle={{ backgroundColor: '#1e293b', borderRadius: '8px', border: 'none' }}
               itemStyle={{ color: '#fff' }}
             />
-            <Legend wrapperStyle={{ paddingTop: '20px' }} />
+            <Legend />
           </PieChart>
         </ResponsiveContainer>
       </div>
@@ -98,12 +97,7 @@ const ResultPage = ({ scores, onNext }) => {
       <button 
         className="btn-primary" 
         onClick={onNext}
-        style={{ 
-          padding: '18px 70px', 
-          fontSize: '1.3rem',
-          marginBottom: '80px',
-          boxShadow: '0 4px 20px rgba(56, 189, 248, 0.4)'
-        }}
+        style={{ padding: '15px 60px', fontSize: '1.2rem' }}
       >
         Next Step
       </button>
