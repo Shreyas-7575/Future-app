@@ -287,7 +287,7 @@ const QuizPage = ({ onComplete, onBack }) => {
       padding: '40px 20px',
       maxWidth: '800px',
       margin: '0 auto',
-      paddingBottom: '100px'
+      paddingBottom: '300px'
     }}>
       <div style={{ position: 'relative', marginBottom: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <button 
@@ -295,10 +295,10 @@ const QuizPage = ({ onComplete, onBack }) => {
           style={{
             position: 'absolute',
             left: 0,
-            top: '-30px',
+            top: '-100px',
             display: 'flex',
             alignItems: 'center',
-            gap: '8px',
+            gap: '10px',
             opacity: 0.8,
             transition: 'opacity 0.2s',
             background: 'none',
@@ -308,14 +308,14 @@ const QuizPage = ({ onComplete, onBack }) => {
           }}
           className="btn-secondary"
         >
-          <ArrowLeft size={24} /> Back
+          <ArrowLeft size={55} /> Back
         </button>
 
         <h1 style={{ 
           background: 'linear-gradient(to right, var(--primary-color), var(--accent-color))',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
-          fontSize: '2.5rem',
+          fontSize: '3.5rem',
           margin: 0
         }}>
           Discover Your Path
