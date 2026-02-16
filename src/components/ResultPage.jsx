@@ -7,6 +7,26 @@ const COLORS = {
   Arts: '#818cf8', // secondary
 };
 
+const RADIAN = Math.PI / 180;
+const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }) => {
+  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+  const x = cx + radius * Math.cos(-midAngle * RADIAN);
+  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+  return (
+    <text 
+      x={x} 
+      y={y} 
+      fill="white" 
+      textAnchor="middle" 
+      dominantBaseline="central"
+      style={{ fontSize: '1.2rem', fontWeight: 'bold' }}
+    >
+      {`${(percent * 100).toFixed(0)}%`}
+    </text>
+  );
+};
+
 const ResultPage = ({ scores, onNext }) => {
   const total = scores.Science + scores.Commerce + scores.Arts;
   
@@ -64,10 +84,10 @@ const ResultPage = ({ scores, onNext }) => {
               cx="50%"
               cy="50%"
               labelLine={false}
-              outerRadius={120}
+              label={renderCustomizedLabel}
+              outerRadius={150}
               fill="#8884d8"
               dataKey="value"
-              label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
             >
               {data.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={COLORS[entry.name]} />
@@ -77,7 +97,7 @@ const ResultPage = ({ scores, onNext }) => {
               contentStyle={{ backgroundColor: '#1e293b', borderRadius: '8px', border: 'none' }}
               itemStyle={{ color: '#fff' }}
             />
-            <Legend />
+            <Legend verticalAlign="bottom" height={36}/>
           </PieChart>
         </ResponsiveContainer>
       </div>
