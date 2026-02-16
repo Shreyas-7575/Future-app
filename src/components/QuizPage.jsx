@@ -259,10 +259,10 @@ import { ArrowLeft } from 'lucide-react';
 const QuizPage = ({ onComplete, onBack }) => {
   const [answers, setAnswers] = useState({});
 
-  const handleOptionSelect = (questionId, optionType) => {
+  const handleOptionSelect = (questionId, optionIndex) => {
     setAnswers(prev => ({
       ...prev,
-      [questionId]: optionType
+      [questionId]: optionIndex
     }));
   };
 
@@ -273,7 +273,10 @@ const QuizPage = ({ onComplete, onBack }) => {
     }
 
     const scores = { Science: 0, Commerce: 0, Arts: 0 };
-    Object.values(answers).forEach(type => {
+    Object.entries(answers).forEach(([qId, optIdx]) => {
+      const question = questions.find(q => q.id === parseInt(qId));
+      const selectedOption = question.options[optIdx];
+      const type = selectedOption.type;
       if (scores[type] !== undefined) {
         scores[type]++;
       }
@@ -293,7 +296,7 @@ const QuizPage = ({ onComplete, onBack }) => {
         onClick={onBack}
         style={{
           position: 'fixed',
-          top: '30px',
+          top: '-100px',
           left: '30px',
           display: 'flex',
           alignItems: 'center',
@@ -337,13 +340,13 @@ const QuizPage = ({ onComplete, onBack }) => {
               {q.options.map((opt, i) => (
                 <button
                   key={i}
-                  onClick={() => handleOptionSelect(q.id, opt.type)}
+                  onClick={() => handleOptionSelect(q.id, i)}
                   style={{
                     padding: '15px',
                     borderRadius: '12px',
                     border: '1px solid',
-                    borderColor: answers[q.id] === opt.type ? 'var(--primary-color)' : 'rgba(255,255,255,0.1)',
-                    background: answers[q.id] === opt.type ? 'rgba(56, 189, 248, 0.2)' : 'rgba(255,255,255,0.05)',
+                    borderColor: answers[q.id] === i ? 'var(--primary-color)' : 'rgba(255,255,255,0.1)',
+                    background: answers[q.id] === i ? 'rgba(56, 189, 248, 0.2)' : 'rgba(255,255,255,0.05)',
                     color: 'var(--text-color)',
                     textAlign: 'left',
                     transition: 'all 0.2s',
@@ -358,13 +361,13 @@ const QuizPage = ({ onComplete, onBack }) => {
                     height: '20px',
                     borderRadius: '50%',
                     border: '2px solid',
-                    borderColor: answers[q.id] === opt.type ? 'var(--primary-color)' : 'rgba(255,255,255,0.5)',
+                    borderColor: answers[q.id] === i ? 'var(--primary-color)' : 'rgba(255,255,255,0.5)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0
                   }}>
-                    {answers[q.id] === opt.type && (
+                    {answers[q.id] === i && (
                       <div style={{
                         width: '10px',
                         height: '10px',
