@@ -1,33 +1,8 @@
 import React from 'react';
-
-const careers = {
-  Science: [
-    { id: 'eng', title: 'Engineering', icon: '⚙️' },
-    { id: 'med', title: 'Medical (MBBS/BDS)', icon: '🩺' },
-    { id: 'biotech', title: 'Biotechnology', icon: '🧬' },
-    { id: 'astro', title: 'Astronomy & Space', icon: '🔭' },
-    { id: 'forensic', title: 'Forensic Science', icon: '🔍' }
-  ],
-  Commerce: [
-    { id: 'ca', title: 'Chartered Accountancy', icon: '📊' },
-    { id: 'inv', title: 'Investment Banking', icon: '💰' },
-    { id: 'mkt', title: 'Marketing & Sales', icon: '📢' },
-    { id: 'ent', title: 'Entrepreneurship', icon: '🚀' },
-    { id: 'eco', title: 'Economics', icon: '📉' },
-    { id: 'drop', title: 'Dropshipping', icon: '📦' },
-    { id: 'cs', title: 'Company Secretary', icon: '📑' }
-  ],
-  Arts: [
-    { id: 'law', title: 'Law & Judiciary', icon: '⚖️' },
-    { id: 'journ', title: 'Journalism & Media', icon: '🎙️' },
-    { id: 'psych', title: 'Psychology', icon: '🧠' },
-    { id: 'design', title: 'Fashion & Product Design', icon: '👗' },
-    { id: 'civil', title: 'Civil Services (IAS/IPS)', icon: '🏛️' }
-  ]
-};
+import { careersData } from '../data/careerData';
 
 const CareerOptionsPage = ({ stream, onSelectCareer, onBack }) => {
-  const options = careers[stream] || [];
+  const options = careersData[stream] || [];
 
   return (
     <div className="animate-fade-in" style={{
@@ -60,7 +35,7 @@ const CareerOptionsPage = ({ stream, onSelectCareer, onBack }) => {
           <button
             key={career.id}
             className="glass"
-            onClick={() => onSelectCareer(career.title)}
+            onClick={() => onSelectCareer(career)}
             style={{
               padding: '25px',
               display: 'flex',
