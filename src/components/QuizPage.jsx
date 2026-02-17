@@ -273,12 +273,11 @@ const QuizPage = ({ onComplete, onBack }) => {
     }
 
     const scores = { Science: 0, Commerce: 0, Arts: 0 };
-    Object.entries(answers).forEach(([qId, optIdx]) => {
+    Object.entries(answers).forEach(([qId, optIndex]) => {
       const question = questions.find(q => q.id === parseInt(qId));
-      const selectedOption = question.options[optIdx];
-      const type = selectedOption.type;
-      if (scores[type] !== undefined) {
-        scores[type]++;
+      const selectedOption = question?.options[optIndex];
+      if (selectedOption && scores[selectedOption.type] !== undefined) {
+        scores[selectedOption.type]++;
       }
     });
 
@@ -296,7 +295,7 @@ const QuizPage = ({ onComplete, onBack }) => {
         onClick={onBack}
         style={{
           position: 'fixed',
-          top: '-100px',
+          top: '20px',
           left: '30px',
           display: 'flex',
           alignItems: 'center',
