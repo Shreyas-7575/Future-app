@@ -6,7 +6,12 @@ const careers = {
     { id: 'med', title: 'Medical (MBBS/BDS)', icon: '🩺' },
     { id: 'biotech', title: 'Biotechnology', icon: '🧬' },
     { id: 'astro', title: 'Astronomy & Space', icon: '🔭' },
-    { id: 'forensic', title: 'Forensic Science', icon: '🔍' }
+    { id: 'forensic', title: 'Forensic Science', icon: '🔍' },
+    { id: 'ds', title: 'Data Science', icon: '📈' },
+    { id: 'ai', title: 'AI & Robotics', icon: '🤖' },
+    { id: 'se', title: 'Sustainable Energy', icon: '🌱' },
+    { id: 'nano', title: 'Nanotechnology', icon: '🏗️' },
+    { id: 'pharma', title: 'Pharmacology', icon: '💊' }
   ],
   Commerce: [
     { id: 'ca', title: 'Chartered Accountancy', icon: '📊' },
@@ -15,14 +20,22 @@ const careers = {
     { id: 'ent', title: 'Entrepreneurship', icon: '🚀' },
     { id: 'eco', title: 'Economics', icon: '📉' },
     { id: 'drop', title: 'Dropshipping', icon: '📦' },
-    { id: 'cs', title: 'Company Secretary', icon: '📑' }
+    { id: 'cs', title: 'Company Secretary', icon: '📑' },
+    { id: 'ba', title: 'Business Analytics', icon: '📈' },
+    { id: 'fp', title: 'Financial Planning', icon: '🏦' },
+    { id: 'bc', title: 'Business Consulting', icon: '👔' }
   ],
   Arts: [
     { id: 'law', title: 'Law & Judiciary', icon: '⚖️' },
     { id: 'journ', title: 'Journalism & Media', icon: '🎙️' },
     { id: 'psych', title: 'Psychology', icon: '🧠' },
     { id: 'design', title: 'Fashion & Product Design', icon: '👗' },
-    { id: 'civil', title: 'Civil Services (IAS/IPS)', icon: '🏛️' }
+    { id: 'civil', title: 'Civil Services (IAS/IPS)', icon: '🏛️' },
+    { id: 'gd', title: 'Graphic Design', icon: '🎨' },
+    { id: 'id', title: 'Interior Design', icon: '🏠' },
+    { id: 'hm', title: 'Hotel Management', icon: '🏨' },
+    { id: 'fa', title: 'Fine Arts', icon: '🖌️' },
+    { id: 'em', title: 'Event Management', icon: '🎫' }
   ]
 };
 
