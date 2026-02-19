@@ -16,13 +16,36 @@ const CareerDetailPage = ({ career, onBack }) => {
       color: 'white'
     }}>
       {/* Header Section */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '40px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '20px' }}>
         <button className="btn-secondary" onClick={onBack}>← Back</button>
         <div style={{ fontSize: '3rem' }}>{career.icon}</div>
         <h1 style={{ margin: 0, fontSize: '2.5rem', fontWeight: 'bold', background: 'linear-gradient(135deg, white, var(--primary-color))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
           {career.title}
         </h1>
       </div>
+
+      {/* Salary Highlights Card - MOVED TO TOP */}
+      <section className="glass" style={{ 
+        padding: '20px 30px', 
+        borderRadius: '24px', 
+        marginBottom: '30px',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        background: 'rgba(var(--primary-rgb, 0, 120, 255), 0.15)',
+        border: '1px solid rgba(var(--primary-color, #0078ff), 0.3)'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <span style={{ fontSize: '2rem' }}>💰</span>
+          <div>
+            <p style={{ margin: 0, opacity: 0.7, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Average Starting Salary</p>
+            <h2 style={{ margin: 0, fontSize: '1.8rem', color: 'var(--primary-color)', fontWeight: 'bold' }}>{career.salary}</h2>
+          </div>
+        </div>
+        <div style={{ textAlign: 'right', display: 'none', md: 'block' }}>
+           <p style={{ margin: 0, fontSize: '0.8rem', opacity: 0.5 }}>*Industry standard</p>
+        </div>
+      </section>
 
       <div style={{ display: 'grid', gap: '30px' }}>
         {/* Overview Card */}
@@ -97,29 +120,17 @@ const CareerDetailPage = ({ career, onBack }) => {
           </section>
         </div>
 
-        {/* Colleges & Salary Row */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
-           <section className="glass" style={{ padding: '30px', borderRadius: '24px' }}>
-            <h2 style={{ color: 'var(--primary-color)', marginBottom: '15px', fontSize: '1.3rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <span>🏛️</span> Top Institutions
-            </h2>
-            <ul style={{ paddingLeft: '20px', margin: 0, opacity: 0.8, display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              {career.colleges.map((college, index) => (
-                <li key={index}>{college}</li>
-              ))}
-            </ul>
-          </section>
-
-          <section className="glass" style={{ padding: '30px', borderRadius: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
-            <h2 style={{ color: 'var(--primary-color)', marginBottom: '10px', fontSize: '1.3rem' }}>
-              💰 Average Starting Salary
-            </h2>
-            <p style={{ fontSize: '1.5rem', fontWeight: 'bold', margin: 0 }}>
-              {career.salary}
-            </p>
-            <p style={{ fontSize: '0.8rem', opacity: 0.5, marginTop: '5px' }}>*Based on industry standards</p>
-          </section>
-        </div>
+        {/* Colleges Row */}
+        <section className="glass" style={{ padding: '30px', borderRadius: '24px' }}>
+          <h2 style={{ color: 'var(--primary-color)', marginBottom: '15px', fontSize: '1.3rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <span>🏛️</span> Top Institutions
+          </h2>
+          <ul style={{ paddingLeft: '20px', margin: 0, opacity: 0.8, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {career.colleges.map((college, index) => (
+              <li key={index}>{college}</li>
+            ))}
+          </ul>
+        </section>
       </div>
 
       <div style={{ marginTop: '50px', textAlign: 'center' }}>
