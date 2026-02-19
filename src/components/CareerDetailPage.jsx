@@ -121,7 +121,7 @@ const CareerDetailPage = ({ career, onBack }) => {
         </div>
 
         {/* Colleges Row */}
-        <section className="glass" style={{ padding: '30px', borderRadius: '24px' }}>
+        <section className="glass" style={{ padding: '30px', borderRadius: '24px', marginBottom: '10px' }}>
           <h2 style={{ color: 'var(--primary-color)', marginBottom: '15px', fontSize: '1.3rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
             <span>🏛️</span> Top Institutions
           </h2>
@@ -131,7 +131,51 @@ const CareerDetailPage = ({ career, onBack }) => {
             ))}
           </ul>
         </section>
+
+        {/* Pros & Cons Section - NEW */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
+          {/* Advantages */}
+          <section className="glass" style={{ 
+            padding: '30px', 
+            borderRadius: '24px',
+            border: '1px solid rgba(75, 255, 150, 0.2)',
+            background: 'rgba(75, 255, 150, 0.03)'
+          }}>
+            <h2 style={{ color: '#4bff96', marginBottom: '20px', fontSize: '1.3rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <span>✅</span> Advantages
+            </h2>
+            <ul style={{ paddingLeft: '0', listStyle: 'none', margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {career.pros.map((pro, index) => (
+                <li key={index} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', opacity: 0.9 }}>
+                  <span style={{ color: '#4bff96', fontWeight: 'bold' }}>•</span>
+                  <span>{pro}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* Disadvantages */}
+          <section className="glass" style={{ 
+            padding: '30px', 
+            borderRadius: '24px',
+            border: '1px solid rgba(255, 75, 75, 0.2)',
+            background: 'rgba(255, 75, 75, 0.03)'
+          }}>
+            <h2 style={{ color: '#ff4b4b', marginBottom: '20px', fontSize: '1.3rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <span>❌</span> Disadvantages
+            </h2>
+            <ul style={{ paddingLeft: '0', listStyle: 'none', margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {career.cons.map((con, index) => (
+                <li key={index} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', opacity: 0.9 }}>
+                  <span style={{ color: '#ff4b4b', fontWeight: 'bold' }}>•</span>
+                  <span>{con}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
       </div>
+
 
       <div style={{ marginTop: '50px', textAlign: 'center' }}>
         <button className="btn-primary" onClick={onBack} style={{ padding: '15px 40px' }}>

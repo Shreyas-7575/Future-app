@@ -15,7 +15,9 @@ export const careerData = {
       ],
       entranceExams: ['JEE Main', 'JEE Advanced', 'BITSAT', 'VITEEE', 'MHT-CET'],
       colleges: ['IITs (Indian Institutes of Technology)', 'NITs', 'BITS Pilani', 'III-Ts'],
-      salary: '₹5 LPA - ₹50+ LPA'
+      salary: '₹5 LPA - ₹50+ LPA',
+      pros: ['High earning potential', 'Diverse specialization options', 'Global job opportunities', 'Intellectually stimulating work'],
+      cons: ['Highly competitive exams', 'High-pressure work environments', 'Long study duration', 'Continuous need to update technical skills']
     },
     {
       id: 'med',
@@ -32,7 +34,9 @@ export const careerData = {
       ],
       entranceExams: ['NEET-UG', 'AIIMS', 'JIPMER'],
       colleges: ['AIIMS New Delhi', 'CMC Vellore', 'Armed Forces Medical College (AFMC)'],
-      salary: '₹6 LPA - ₹25+ LPA'
+      salary: '₹6 LPA - ₹25+ LPA',
+      pros: ['Noble and respected profession', 'High job security', 'Ability to save lives', 'Continual professional growth'],
+      cons: ['Extremely long study and training years', 'Poor work-life balance', 'High emotional and mental stress', 'Irregular and long working hours']
     },
     {
       id: 'biotech',
@@ -49,7 +53,9 @@ export const careerData = {
       ],
       entranceExams: ['GAT-B', 'IIT-JAM', 'CUET', 'JEE (for B.Tech Biotechnology)'],
       colleges: ['IIT Bombay', 'JNU (Jawaharlal Nehru University)', 'University of Hyderabad'],
-      salary: '₹4 LPA - ₹15 LPA'
+      salary: '₹4 LPA - ₹15 LPA',
+      pros: ['Contribution to ground-breaking research', 'Growing field with future potential', 'Diverse career paths (Pharma, Agri, etc.)', 'Opportunity to work in labs'],
+      cons: ['Requires advanced degrees for high growth', 'Can be repetitive research work', 'Initial salary can be lower than IT', 'Highly dependent on research funding']
     },
     {
         id: 'astro',
@@ -66,7 +72,9 @@ export const careerData = {
         ],
         entranceExams: ['JEST', 'GATE', 'BITSAT', 'ISRO Entrance Exam'],
         colleges: ['Indian Institute of Astrophysics (IIA)', 'Indian Institute of Space Science and Technology (IIST)'],
-        salary: '₹8 LPA - ₹20+ LPA'
+        salary: '₹8 LPA - ₹20+ LPA',
+        pros: ['Deeply intellectual and fascinating', 'Opportunity to work with agencies like ISRO/NASA', 'Contributing to human knowledge', 'Access to advanced technology'],
+        cons: ['Limited job positions available', 'Requires many years of higher education', 'Irregular hours for star observations', 'Heavily involves complex mathematics']
     },
     {
         id: 'forensic',
@@ -83,7 +91,9 @@ export const careerData = {
         ],
         entranceExams: ['CUET', 'AIFSET', 'FACT (Forensic Aptitude & Caliber Test)'],
         colleges: ['National Forensic Sciences University (NFSU)', 'Banaras Hindu University (BHU)'],
-        salary: '₹3 LPA - ₹12 LPA'
+        salary: '₹3 LPA - ₹12 LPA',
+        pros: ['Exciting and investigative work', 'Strong sense of serving justice', 'Unique combination of science and law', 'Growing demand in private sectors'],
+        cons: ['Exposure to graphic crime scenes', 'High attention to detail required', 'Pressure to be 100% accurate', 'Work can be emotionally taxing']
     },
     {
         id: 'ds',
@@ -100,7 +110,9 @@ export const careerData = {
         ],
         entranceExams: ['GATE', 'IIT-JAM', 'CUET'],
         colleges: ['IITs', 'ISI (Indian Statistical Institute)', 'BITS Pilani'],
-        salary: '₹6 LPA - ₹35+ LPA'
+        salary: '₹6 LPA - ₹35+ LPA',
+        pros: ['Highest demand in modern industry', 'Excellent pay and remote opportunities', 'Applicable to almost every sector', 'Continuous learning and innovation'],
+        cons: ['Highly technical and mathematical', 'Sitting for long hours at computers', 'Constant need to learn new tools', 'Messy real-world data can be frustrating']
     },
     {
         id: 'ai',
@@ -117,7 +129,9 @@ export const careerData = {
         ],
         entranceExams: ['JEE Main', 'JEE Advanced', 'GATE'],
         colleges: ['IIT Hyderabad', 'IIT Madras', 'IIIT Hyderabad'],
-        salary: '₹10 LPA - ₹60+ LPA'
+        salary: '₹10 LPA - ₹60+ LPA',
+        pros: ['Working on the future of technology', 'High-impact work on world problems', 'Lucrative salary and research perks', 'Creative and innovative environment'],
+        cons: ['Deeply competitive and difficult subjects', 'Ethical complexities to consider', 'Fast-paced (knowledge becomes obsolete fast)', 'Requires deep focus and patience']
     },
     {
         id: 'se',
@@ -134,7 +148,9 @@ export const careerData = {
         ],
         entranceExams: ['JEE Main', 'GATE'],
         colleges: ['IIT Delhi', 'IIT Bombay', 'TERI School of Advanced Studies'],
-        salary: '₹5 LPA - ₹18 LPA'
+        salary: '₹5 LPA - ₹18 LPA',
+        pros: ['Contributing to saving the planet', 'Rapidly growing industry due to climate change', 'Government and global support', 'Satisfying ethical career'],
+        cons: ['Highly dependent on government subsidies/policies', 'Technical implementation can be expensive', 'May involve working in remote outdoor sites', 'Field takes time to scale up']
     },
     {
         id: 'nano',
@@ -151,7 +167,9 @@ export const careerData = {
         ],
         entranceExams: ['JEE Main', 'VITEEE', 'SRMJEEE'],
         colleges: ['Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR)', 'IITs'],
-        salary: '₹6 LPA - ₹22 LPA'
+        salary: '₹6 LPA - ₹22 LPA',
+        pros: ['Cutting edge materials science', 'Multidisciplinary (Physics, Bio, Chem)', 'Massive potential in medicine and tech', 'Unique and rare expertise'],
+        cons: ['Extremely technical and difficult study', 'Requires very expensive lab equipment', 'Safety concerns regarding nano-particles', 'Fewer jobs at entry level']
     },
     {
         id: 'pharma',
@@ -168,7 +186,9 @@ export const careerData = {
         ],
         entranceExams: ['GPAT', 'NIPER JEE', 'CUET'],
         colleges: ['NIPERs', 'Jamia Hamdard', 'PCP (Poona College of Pharmacy)'],
-        salary: '₹3.5 LPA - ₹12 LPA'
+        salary: '₹3.5 LPA - ₹12 LPA',
+        pros: ['Vital to healthcare and drug discovery', 'Stable industry (Pharma always needed)', 'Good opportunities in R&D', 'Respected role in medical science'],
+        cons: ['Strict regulatory environments', 'Involves long hours in labs', 'High level of legal and ethical responsibility', 'Relies heavily on meticulous documentation']
     }
   ],
   Commerce: [
@@ -187,7 +207,9 @@ export const careerData = {
       ],
       entranceExams: ['CA Foundation', 'CA Intermediate', 'CA Final'],
       colleges: ['The Institute of Chartered Accountants of India (ICAI)'],
-      salary: '₹8 LPA - ₹30+ LPA'
+      salary: '₹8 LPA - ₹30+ LPA',
+      pros: ['Very safe and stable career', 'Respected social and professional status', 'Can start independent practice', 'No upper limit on earnings for experts'],
+      cons: ['Extremely difficult exams (low pass rate)', 'High pressure during tax/audit seasons', 'Continuous learning of changing tax laws', 'Long hours of detailed desk work']
     },
     {
        id: 'inv',
@@ -204,7 +226,9 @@ export const careerData = {
        ],
        entranceExams: ['CAT (for MBA)', 'CFA Level I, II, III'],
        colleges: ['IIMs', 'FMS Delhi', 'XLRI Jamshedpur'],
-       salary: '₹10 LPA - ₹1+ Crore'
+       salary: '₹10 LPA - ₹1+ Crore',
+       pros: ['Incredibly high salary and bonuses', 'Work with top world leaders and CEOs', 'High-speed and exciting environment', 'Elite status in the finance world'],
+       cons: ['Infamous for 100+ hour work weeks', 'Extremely high stress and burnout risk', 'Highly dependent on market conditions', 'Requires constant availability (24/7)']
     },
     {
       id: 'mkt',
@@ -221,7 +245,9 @@ export const careerData = {
       ],
       entranceExams: ['CAT', 'XAT', 'SNAP'],
       colleges: ['IIMs', 'MICA Ahmedabad', 'NMIMS Mumbai'],
-      salary: '₹4 LPA - ₹30+ LPA'
+      salary: '₹4 LPA - ₹30+ LPA',
+      pros: ['Highly creative and dynamic', 'Performance-linked high incentives', 'Applicable to every business ever', 'Builds great people and networking skills'],
+      cons: ['Highly target-driven (Sales pressure)', 'Uncertainty of some campaigns/ads', 'Requires constant adaptability', 'Can involve frequent travel']
     },
     {
       id: 'ent',
@@ -238,7 +264,9 @@ export const careerData = {
       ],
       entranceExams: ['None (Experience is key)'],
       colleges: ['IIMs (Entrepreneurship cells)', 'S.P. Jain Institute of Management', 'EDII Ahmedabad'],
-      salary: 'Variable (Uncapped potential)'
+      salary: 'Variable (Uncapped potential)',
+      pros: ['Be your own boss', 'Unlimited financial growth potential', 'Create jobs and solve social problems', 'Work on your passion projects'],
+      cons: ['Very high risk of failure', 'Long hours with no guaranteed pay', 'High stress and immense responsibility', 'Social and financial instability in early days']
     },
     {
       id: 'eco',
@@ -255,7 +283,9 @@ export const careerData = {
       ],
       entranceExams: ['CUET-UG', 'IIT-JAM (for Economics)', 'DSE/ISI Entrance'],
       colleges: ['Delhi School of Economics (DSE)', 'St. Stephens College', 'ISI Kolkata'],
-      salary: '₹5 LPA - ₹25 LPA'
+      salary: '₹5 LPA - ₹25 LPA',
+      pros: ['Deep understanding of global systems', 'Respected roles in policy and finance', 'Versatile across public and private sectors', 'Intellectually challenging'],
+      cons: ['Requires very high level of math/stats', 'Can be dry or theoretical for some', 'High competition in top-tier research institutes', 'Advanced degrees often required for good roles']
     },
     {
       id: 'drop',
@@ -272,7 +302,9 @@ export const careerData = {
       ],
       entranceExams: ['Self-taught (Courses like Coursera/Udemy help)'],
       colleges: ['N/A (Bootstrap your own venture)'],
-      salary: '₹1 LPA - ₹10+ LPA (Profit-driven)'
+      salary: '₹1 LPA - ₹10+ LPA (Profit-driven)',
+      pros: ['Very low initial investment', 'Easy to start from home', 'Highly scalable if successful', 'Learn modern digital marketing'],
+      cons: ['Thin profit margins after ad costs', 'Highly dependent on supplier reliability', 'Intense competition from other stores', 'Managing customer returns and complaints']
     },
     {
       id: 'cs',
@@ -289,7 +321,9 @@ export const careerData = {
       ],
       entranceExams: ['CSEET', 'CS Executive', 'CS Professional'],
       colleges: ['The Institute of Company Secretaries of India (ICSI)'],
-      salary: '₹5 LPA - ₹20 LPA'
+      salary: '₹5 LPA - ₹20 LPA',
+      pros: ['Respected corporate position', 'Vital to business legality and ethics', 'Stable and secure corporate role', 'Good work-life balance compared to CA'],
+      cons: ['High legal and compliance responsibility', 'Work can be very detailed and repetitive', 'Professional exams can be challenging', 'Relies on staying updated with changing laws']
     },
     {
       id: 'ba',
@@ -306,7 +340,9 @@ export const careerData = {
       ],
       entranceExams: ['CAT', 'GMAT', 'GRE'],
       colleges: ['IIM Bangalore', 'ISB Hyderabad', 'IIT Kharagpur'],
-      salary: '₹6 LPA - ₹28 LPA'
+      salary: '₹6 LPA - ₹28 LPA',
+      pros: ['Highly valued by every big company', 'Combines tech skills with business sense', 'Fast career progression', 'Remote work opportunities'],
+      cons: ['Requires strong analytical and tech mindset', 'Constant pressure to produce insights', 'Complex tools required for data handled', 'Sitting for long hours staring at data']
     },
     {
       id: 'fp',
@@ -323,7 +359,9 @@ export const careerData = {
       ],
       entranceExams: ['CFP certification exams'],
       colleges: ['Financial Planning Standards Board (FPSB) India authorized centers'],
-      salary: '₹4 LPA - ₹22 LPA'
+      salary: '₹4 LPA - ₹22 LPA',
+      pros: ['Help people secure their future', 'Can work as an independent consultant', 'Flexible working hours typically', 'Strong personal financial knowledge'],
+      cons: ['Takes time to build a client base', 'Stressful to manage other people\'s money', 'Earnings can fluctuate with markets', 'Requires high patience and empathy']
     },
     {
       id: 'bc',
@@ -340,7 +378,9 @@ export const careerData = {
       ],
       entranceExams: ['CAT', 'GMAT'],
       colleges: ['IIMs', 'ISB', 'FMS Delhi'],
-      salary: '₹12 LPA - ₹40+ LPA'
+      salary: '₹12 LPA - ₹40+ LPA',
+      pros: ['High prestige and exposure to many industries', 'Excellent salary and travel perks', 'Learn massive amounts of business knowledge', 'Great networking opportunities'],
+      cons: ['Excessive travel requirements', 'Very long and unpredictable hours', 'High pressure to deliver impact', 'Initial years can be very demanding']
     }
   ],
   Arts: [
@@ -359,7 +399,9 @@ export const careerData = {
       ],
       entranceExams: ['CLAT', 'AILET', 'LSAT-India'],
       colleges: ['National Law Schools', 'Delhi University'],
-      salary: '₹4 LPA - ₹20+ LPA'
+      salary: '₹4 LPA - ₹20+ LPA',
+      pros: ['Intellectually satisfying and powerful', 'High status and influence', 'Protect people\'s rights and seek justice', 'Broad career paths (Corporate, Civil, Criminal)'],
+      cons: ['Long study hours and vast amount of reading', 'Initially lower pay in litigation', 'High pressure and stressful courtroom environments', 'Immense competition among lawyers']
     },
     {
       id: 'journ',
@@ -376,7 +418,9 @@ export const careerData = {
       ],
       entranceExams: ['CUET', 'IIMC Entrance', 'ACJ Entrance'],
       colleges: ['IIMC Delhi', 'Asian College of Journalism (ACJ)', 'MCRC Jamia'],
-      salary: '₹3 LPA - ₹15 LPA'
+      salary: '₹3 LPA - ₹15 LPA',
+      pros: ['Public visibility and influence', 'Exciting and non-routine work', 'Travel and meet interesting people', 'Shape public opinion on key issues'],
+      cons: ['Initially low salary', 'High pressure and tight deadlines', 'Work in risky or uncomfortable conditions', 'Highly irregular working hours']
     },
     {
       id: 'psych',
@@ -393,7 +437,9 @@ export const careerData = {
       ],
       entranceExams: ['CUET', 'GATE (for PhD)', 'NET'],
       colleges: ['TISS Mumbai', 'Lady Shri Ram College', 'LIP (IHBAS)'],
-      salary: '₹3 LPA - ₹18 LPA'
+      salary: '₹3 LPA - ₹18 LPA',
+      pros: ['Deeply meaningful and empathetic', 'Help people overcome mental challenges', 'Fascinating insight into human mind', 'Growing demand due to mental health awareness'],
+      cons: ['Emotionally draining to hear about others\' pain', 'Takes many years to become a licensed professional', 'Initial pay is quite modest', 'Ongoing effort to maintain professional boundaries']
     },
     {
       id: 'design',
@@ -410,7 +456,9 @@ export const careerData = {
       ],
       entranceExams: ['NID DAT', 'UCEED', 'NIFT Entrance'],
       colleges: ['NID Ahmedabad', 'NIFT Delhi', 'IIT Bombay (IDC)'],
-      salary: '₹4 LPA - ₹20 LPA'
+      salary: '₹4 LPA - ₹20 LPA',
+      pros: ['Creative freedom and expression', 'See your ideas come to life visually', 'Exciting industry and trends', 'Can lead to global fame and prestige'],
+      cons: ['Highly competitive and subjective', 'Long and irregular working hours', 'Tight deadlines for collections/projects', 'Physical labor involved (prototypes/stitching)']
     },
     {
       id: 'civil',
@@ -427,7 +475,9 @@ export const careerData = {
       ],
       entranceExams: ['UPSC CSE'],
       colleges: ['Any recognized university'],
-      salary: '₹56,100 (starting basic) + Perks'
+      salary: '₹56,100 (starting basic) + Perks',
+      pros: ['Immense power and social impact', 'Highest job security in the country', 'Wide range of administrative experiences', 'Prestigious status and government perks'],
+      cons: ['Extremely difficult exam (Success rate < 0.1%)', 'High political pressure and transfers', 'Vast and demanding work hours', 'Huge responsibility and public scrutiny']
     },
     {
       id: 'gd',
@@ -444,7 +494,9 @@ export const careerData = {
       ],
       entranceExams: ['UCEED', 'NID DAT'],
       colleges: ['National Institute of Design (NID)', 'MAHE Manipal'],
-      salary: '₹3 LPA - ₹18 LPA'
+      salary: '₹3 LPA - ₹18 LPA',
+      pros: ['Work on creative and visual projects', 'Growing demand in every digital field', 'Good options for freelancing and remote work', 'Flexible and modern work environment'],
+      cons: ['Subjective feedback can be frustrating', 'Tight deadlines for creative tasks', 'Long hours sitting at a screen', 'Lower pay compared to engineering initially']
     },
     {
       id: 'id',
@@ -461,7 +513,9 @@ export const careerData = {
       ],
       entranceExams: ['AIEED', 'NIFT', 'NID'],
       colleges: ['CEPT University Ahmedabad', 'NID'],
-      salary: '₹3.5 LPA - ₹15 LPA'
+      salary: '₹3.5 LPA - ₹15 LPA',
+      pros: ['Transform physical spaces beautifully', 'Dynamic and creative work every day', 'Can start your own design studio', 'Work with interesting clients and materials'],
+      cons: ['Client management can be very stressful', 'Requires frequent visits to dusty construction sites', 'Deadlines are often very tight', 'Dependent on real-estate market cycles']
     },
     {
       id: 'hm',
@@ -478,7 +532,9 @@ export const careerData = {
       ],
       entranceExams: ['NCHMCT JEE'],
       colleges: ['IHM Pusa', 'IHM Mumbai', 'Welcomgroup Graduate School (WGSHA)'],
-      salary: '₹3 LPA - ₹12 LPA'
+      salary: '₹3 LPA - ₹12 LPA',
+      pros: ['Work in luxurious and exciting environments', 'Travel and meet global people', 'Diverse career roles inside the hotel', 'Fast growth to manager levels'],
+      cons: ['Very long and irregular hours', 'Weekend and holiday work required', 'Physical exertion and standing for long periods', 'Demanding customer service situations']
     },
     {
       id: 'fa',
@@ -495,7 +551,9 @@ export const careerData = {
       ],
       entranceExams: ['University specific entrance tests'],
       colleges: ['Sir J.J. School of Art', 'College of Art (Delhi)'],
-      salary: 'Highly variable (Portfolio-driven)'
+      salary: 'Highly variable (Portfolio-driven)',
+      pros: ['Ultimate creative freedom', 'Fame and recognition in the art world', 'Flexible work on your own terms', 'Pure expression of personal identity'],
+      cons: ['Highly unstable and unpredictable income initially', 'Difficulty in breaking into top galleries', 'Often requires a second job for stability', 'Work is highly subjective and personal']
     },
     {
       id: 'em',
@@ -512,7 +570,9 @@ export const careerData = {
       ],
       entranceExams: ['None (CUET for some universities)'],
       colleges: ['NIEM (National Institute of Event Management)', 'EMDI'],
-      salary: '₹3 LPA - ₹15 LPA'
+      salary: '₹3 LPA - ₹15 LPA',
+      pros: ['High excitement and diverse work', 'Very rewarding to see results instantly', 'Excellent networking with high-profile people', 'Opportunities for entrepreneurship'],
+      cons: ['Very high level of stress on the event day', 'Working when others are celebrating (Weekends/Holidays)', 'Requires extreme patience and multitasking', 'Physically demanding and long hours']
     }
   ]
 };
