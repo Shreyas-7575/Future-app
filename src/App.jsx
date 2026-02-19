@@ -186,7 +186,9 @@ function App() {
         />
       )}
 
-      <BottomNav onNavigate={handleNavigate} onOpenModal={handleOpenModal} />
+      {view !== 'career-detail' && (
+        <BottomNav onNavigate={handleNavigate} onOpenModal={handleOpenModal} />
+      )}
 
       {activeModal && (
         <InfoModal 
