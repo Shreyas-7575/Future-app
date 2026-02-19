@@ -1,46 +1,8 @@
 import React from 'react';
-
-const careers = {
-  Science: [
-    { id: 'eng', title: 'Engineering', icon: '⚙️' },
-    { id: 'med', title: 'Medical (MBBS/BDS)', icon: '🩺' },
-    { id: 'biotech', title: 'Biotechnology', icon: '🧬' },
-    { id: 'astro', title: 'Astronomy & Space', icon: '🔭' },
-    { id: 'forensic', title: 'Forensic Science', icon: '🔍' },
-    { id: 'ds', title: 'Data Science', icon: '📈' },
-    { id: 'ai', title: 'AI & Robotics', icon: '🤖' },
-    { id: 'se', title: 'Sustainable Energy', icon: '🌱' },
-    { id: 'nano', title: 'Nanotechnology', icon: '🏗️' },
-    { id: 'pharma', title: 'Pharmacology', icon: '💊' }
-  ],
-  Commerce: [
-    { id: 'ca', title: 'Chartered Accountancy', icon: '📊' },
-    { id: 'inv', title: 'Investment Banking', icon: '💰' },
-    { id: 'mkt', title: 'Marketing & Sales', icon: '📢' },
-    { id: 'ent', title: 'Entrepreneurship', icon: '🚀' },
-    { id: 'eco', title: 'Economics', icon: '📉' },
-    { id: 'drop', title: 'Dropshipping', icon: '📦' },
-    { id: 'cs', title: 'Company Secretary', icon: '📑' },
-    { id: 'ba', title: 'Business Analytics', icon: '📈' },
-    { id: 'fp', title: 'Financial Planning', icon: '🏦' },
-    { id: 'bc', title: 'Business Consulting', icon: '👔' }
-  ],
-  Arts: [
-    { id: 'law', title: 'Law & Judiciary', icon: '⚖️' },
-    { id: 'journ', title: 'Journalism & Media', icon: '🎙️' },
-    { id: 'psych', title: 'Psychology', icon: '🧠' },
-    { id: 'design', title: 'Fashion & Product Design', icon: '👗' },
-    { id: 'civil', title: 'Civil Services (IAS/IPS)', icon: '🏛️' },
-    { id: 'gd', title: 'Graphic Design', icon: '🎨' },
-    { id: 'id', title: 'Interior Design', icon: '🏠' },
-    { id: 'hm', title: 'Hotel Management', icon: '🏨' },
-    { id: 'fa', title: 'Fine Arts', icon: '🖌️' },
-    { id: 'em', title: 'Event Management', icon: '🎫' }
-  ]
-};
+import { careerData } from '../data/careerData';
 
 const CareerOptionsPage = ({ stream, onSelectCareer, onBack }) => {
-  const options = careers[stream] || [];
+  const options = careerData[stream] || [];
 
   return (
     <div className="animate-fade-in" style={{
@@ -60,7 +22,7 @@ const CareerOptionsPage = ({ stream, onSelectCareer, onBack }) => {
       </div>
 
       <p style={{ marginBottom: '40px', opacity: 0.7, textAlign: 'center' }}>
-        Select a specific field to watch videos and learn more about it.
+        Select a career to view deep, step-by-step information and requirements.
       </p>
 
       <div style={{
@@ -73,7 +35,7 @@ const CareerOptionsPage = ({ stream, onSelectCareer, onBack }) => {
           <button
             key={career.id}
             className="glass"
-            onClick={() => onSelectCareer(career.title)}
+            onClick={() => onSelectCareer(career)}
             style={{
               padding: '25px',
               display: 'flex',
@@ -94,7 +56,7 @@ const CareerOptionsPage = ({ stream, onSelectCareer, onBack }) => {
             <div style={{ fontSize: '2.5rem' }}>{career.icon}</div>
             <div>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '5px' }}>{career.title}</h3>
-              <p style={{ fontSize: '0.85rem', opacity: 0.5 }}>Click to view details</p>
+              <p style={{ fontSize: '0.85rem', opacity: 0.5 }}>View deep details & steps</p>
             </div>
           </button>
         ))}
@@ -104,3 +66,4 @@ const CareerOptionsPage = ({ stream, onSelectCareer, onBack }) => {
 };
 
 export default CareerOptionsPage;
+

@@ -8,6 +8,7 @@ import QuizPage from './components/QuizPage';
 import ResultPage from './components/ResultPage';
 import StreamSelectionPage from './components/StreamSelectionPage';
 import CareerOptionsPage from './components/CareerOptionsPage';
+import CareerDetailPage from './components/CareerDetailPage';
 
 function App() {
   const [view, setView] = useState('welcome'); // welcome, login, selection, quiz, result, stream-selection, career-options
@@ -15,6 +16,7 @@ function App() {
   const [activeModal, setActiveModal] = useState(null);
   const [quizScores, setQuizScores] = useState(null);
   const [selectedStream, setSelectedStream] = useState(null);
+  const [selectedCareer, setSelectedCareer] = useState(null);
 
   const handleStart = () => {
     if (user) {
@@ -51,8 +53,9 @@ function App() {
     setView('career-options');
   };
 
-  const handleCareerSelect = (careerTitle) => {
-    alert(`Video content for ${careerTitle} coming soon!`);
+  const handleCareerSelect = (career) => {
+    setSelectedCareer(career);
+    setView('career-detail');
   };
 
   const handleBackToStreams = () => {
@@ -173,6 +176,13 @@ function App() {
           stream={selectedStream} 
           onSelectCareer={handleCareerSelect} 
           onBack={handleBackToStreams}
+        />
+      )}
+
+      {view === 'career-detail' && selectedCareer && (
+        <CareerDetailPage 
+          career={selectedCareer} 
+          onBack={() => setView('career-options')} 
         />
       )}
 
