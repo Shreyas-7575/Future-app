@@ -23,7 +23,7 @@ const BottomNav = ({ onNavigate, onOpenModal }) => {
       
       <button 
         className="btn-secondary" 
-        onClick={() => onNavigate('welcome')}
+        onClick={() => onNavigate('selection')}
         title="Home"
       >
         <Home size={20} />

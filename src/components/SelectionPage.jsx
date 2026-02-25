@@ -38,7 +38,7 @@ const SelectionPage = ({ userName, onSelect }) => {
           e.currentTarget.style.borderColor = 'var(--glass-border)';
         }}
         >
-          <div style={{ fontSize: '3rem' }}>🎓</div>
+          <div style={{ fontSize: '3rem' }}>📜</div>
           After Class 10th
         </button>
 
@@ -65,7 +65,7 @@ const SelectionPage = ({ userName, onSelect }) => {
           e.currentTarget.style.borderColor = 'var(--glass-border)';
         }}
         >
-          <div style={{ fontSize: '3rem' }}>📜</div>
+          <div style={{ fontSize: '3rem' }}>🎓</div>
           After Class 12th
         </button>
       </div>
