@@ -201,7 +201,8 @@ function App() {
       {view === 'career-detail' && selectedCareer && (
         <CareerDetailPage 
           career={selectedCareer} 
-          onBack={() => setView(previousCareerView)} 
+          onBack={() => setView(previousCareerView)}
+          sourcePath={previousCareerView === 'career-options' ? 'class10' : 'class12'}
         />
       )}
 

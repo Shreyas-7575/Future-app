@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const CareerDetailPage = ({ career, onBack }) => {
+const CareerDetailPage = ({ career, onBack, sourcePath }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -107,30 +107,34 @@ const CareerDetailPage = ({ career, onBack }) => {
             </div>
           </section>
 
-          {/* Exams Card */}
-          <section className="glass" style={{ padding: '30px', borderRadius: '24px' }}>
+          {/* Exams Card - hidden for After Class 10 path */}
+          {sourcePath !== 'class10' && (
+            <section className="glass" style={{ padding: '30px', borderRadius: '24px' }}>
+              <h2 style={{ color: 'var(--primary-color)', marginBottom: '15px', fontSize: '1.3rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <span>📚</span> Key Entrance Exams
+              </h2>
+              <ul style={{ paddingLeft: '20px', margin: 0, opacity: 0.8, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                {career.entranceExams.map((exam, index) => (
+                  <li key={index}>{exam}</li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </div>
+
+        {/* Colleges Row - hidden for After Class 10 path */}
+        {sourcePath !== 'class10' && (
+          <section className="glass" style={{ padding: '30px', borderRadius: '24px', marginBottom: '10px' }}>
             <h2 style={{ color: 'var(--primary-color)', marginBottom: '15px', fontSize: '1.3rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <span>📚</span> Key Entrance Exams
+              <span>🏛️</span> Top Institutions
             </h2>
             <ul style={{ paddingLeft: '20px', margin: 0, opacity: 0.8, display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              {career.entranceExams.map((exam, index) => (
-                <li key={index}>{exam}</li>
+              {career.colleges.map((college, index) => (
+                <li key={index}>{college}</li>
               ))}
             </ul>
           </section>
-        </div>
-
-        {/* Colleges Row */}
-        <section className="glass" style={{ padding: '30px', borderRadius: '24px', marginBottom: '10px' }}>
-          <h2 style={{ color: 'var(--primary-color)', marginBottom: '15px', fontSize: '1.3rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <span>🏛️</span> Top Institutions
-          </h2>
-          <ul style={{ paddingLeft: '20px', margin: 0, opacity: 0.8, display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            {career.colleges.map((college, index) => (
-              <li key={index}>{college}</li>
-            ))}
-          </ul>
-        </section>
+        )}
 
         {/* Pros & Cons Section - NEW */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
