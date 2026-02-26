@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StreamSelectionPage = ({ onSelectStream }) => {
+const StreamSelectionPage = ({ onSelectStream, onBack }) => {
   const streams = [
     { id: 'Science', icon: '🔬', desc: 'Engineering, Medical, Research' },
     { id: 'Commerce', icon: '📈', desc: 'Business, Finance, Economics' },
@@ -17,8 +17,13 @@ const StreamSelectionPage = ({ onSelectStream }) => {
       padding: '20px',
       textAlign: 'center'
     }}>
-      <h1 style={{ marginBottom: '15px' }}>Explore Your Future</h1>
-      <p style={{ marginBottom: '50px', opacity: 0.7 }}>Select a stream to watch detailled videos & learn more.</p>
+      {onBack && (
+        <div style={{ width: '100%', maxWidth: '1000px', marginBottom: '20px', display: 'flex', alignItems: 'center' }}>
+          <button className="btn-secondary" onClick={onBack}>← Back</button>
+        </div>
+      )}
+      <h1 style={{ marginBottom: '15px' }}>Choose Your Stream</h1>
+      <p style={{ marginBottom: '50px', opacity: 0.7 }}>Select a stream to explore career options & learn more.</p>
 
       <div style={{
         display: 'flex',

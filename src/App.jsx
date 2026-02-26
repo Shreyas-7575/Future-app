@@ -11,12 +11,13 @@ import CareerOptionsPage from './components/CareerOptionsPage';
 import CareerDetailPage from './components/CareerDetailPage';
 
 function App() {
-  const [view, setView] = useState('welcome'); // welcome, login, selection, quiz, result, stream-selection, career-options
+  const [view, setView] = useState('welcome'); // welcome, login, selection, quiz, result, stream-selection, career-options, class12-stream-selection, class12-career-options
   const [user, setUser] = useState(null);
   const [activeModal, setActiveModal] = useState(null);
   const [quizScores, setQuizScores] = useState(null);
   const [selectedStream, setSelectedStream] = useState(null);
   const [selectedCareer, setSelectedCareer] = useState(null);
+  const [previousCareerView, setPreviousCareerView] = useState('career-options');
 
   const handleStart = () => {
     if (user) {
@@ -35,8 +36,13 @@ function App() {
     if (grade === '10th') {
       setView('quiz');
     } else {
-      alert('After Class 12th path is coming soon!');
+      setView('class12-stream-selection');
     }
+  };
+
+  const handleClass12StreamSelect = (streamId) => {
+    setSelectedStream(streamId);
+    setView('class12-career-options');
   };
 
   const handleQuizComplete = (scores) => {
@@ -53,8 +59,9 @@ function App() {
     setView('career-options');
   };
 
-  const handleCareerSelect = (career) => {
+  const handleCareerSelect = (career, fromView) => {
     setSelectedCareer(career);
+    setPreviousCareerView(fromView || 'career-options');
     setView('career-detail');
   };
 
@@ -174,15 +181,27 @@ function App() {
       {view === 'career-options' && selectedStream && (
         <CareerOptionsPage 
           stream={selectedStream} 
-          onSelectCareer={handleCareerSelect} 
+          onSelectCareer={(career) => handleCareerSelect(career, 'career-options')}
           onBack={handleBackToStreams}
+        />
+      )}
+
+      {view === 'class12-stream-selection' && (
+        <StreamSelectionPage onSelectStream={handleClass12StreamSelect} onBack={() => setView('selection')} />
+      )}
+
+      {view === 'class12-career-options' && selectedStream && (
+        <CareerOptionsPage 
+          stream={selectedStream} 
+          onSelectCareer={(career) => handleCareerSelect(career, 'class12-career-options')}
+          onBack={() => setView('class12-stream-selection')}
         />
       )}
 
       {view === 'career-detail' && selectedCareer && (
         <CareerDetailPage 
           career={selectedCareer} 
-          onBack={() => setView('career-options')} 
+          onBack={() => setView(previousCareerView)} 
         />
       )}
 
