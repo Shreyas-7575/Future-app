@@ -53,7 +53,20 @@ const CareerOptionsPage = ({ stream, onSelectCareer, onBack }) => {
               e.currentTarget.style.background = 'var(--glass-bg)';
             }}
           >
-            <div style={{ fontSize: '2.5rem' }}>{career.icon}</div>
+            <div style={{ 
+              fontSize: career.icon.startsWith('/') ? '0' : '2.5rem', 
+              width: (career.id === 'ca' || career.id === 'cs' || career.id === 'ba') ? '220px' : '120px', 
+              height: (career.id === 'ca' || career.id === 'cs' || career.id === 'ba') ? '110px' : '60px', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center' 
+            }}>
+              {career.icon.startsWith('/') ? (
+                <img src={career.icon} alt={career.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              ) : (
+                career.icon
+              )}
+            </div>
             <div>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '5px' }}>{career.title}</h3>
               <p style={{ fontSize: '0.85rem', opacity: 0.5 }}>View deep details & steps</p>

@@ -195,7 +195,7 @@ export const careerData = {
     {
       id: 'ca',
       title: 'Chartered Accountancy',
-      icon: '📊',
+      icon: '/ca_logo.png',
       overview: 'Chartered Accountants handle financial accounting and reporting, auditing, taxation, and financial management.',
       skills: ['Accountancy', 'Mathematics', 'Taxation Laws', 'Auditing', 'Analytical Skills'],
       steps: [
@@ -309,7 +309,7 @@ export const careerData = {
     {
       id: 'cs',
       title: 'Company Secretary',
-      icon: '📑',
+      icon: '/cs_logo.png',
       overview: 'Company Secretaries ensure that the company complies with financial and legal requirements.',
       skills: ['Legal Compliance', 'Company Law', 'Attention to Detail', 'Corporate Governance', 'Communication'],
       steps: [
@@ -328,7 +328,7 @@ export const careerData = {
     {
       id: 'ba',
       title: 'Business Analytics',
-      icon: '📈',
+      icon: '/ba_logo.png',
       overview: 'Business analytics translates data into actionable business insights to drive decision-making.',
       skills: ['Data Visualization', 'Excel', 'Tableau/Power BI', 'SQL', 'Strategic Thinking'],
       steps: [

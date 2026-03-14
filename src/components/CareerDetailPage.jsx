@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const CareerDetailPage = ({ career, onBack }) => {
+const CareerDetailPage = ({ career, onBack, showColleges, onChatWithAI }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -16,9 +16,8 @@ const CareerDetailPage = ({ career, onBack }) => {
       color: 'white'
     }}>
       {/* Header Section */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '20px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '30px' }}>
         <button className="btn-secondary" onClick={onBack}>← Back</button>
-        <div style={{ fontSize: '3rem' }}>{career.icon}</div>
         <h1 style={{ margin: 0, fontSize: '2.5rem', fontWeight: 'bold', background: 'linear-gradient(135deg, white, var(--primary-color))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
           {career.title}
         </h1>
@@ -106,6 +105,20 @@ const CareerDetailPage = ({ career, onBack }) => {
           </div>
         </section>
 
+        {/* Institutions Section (Only for After Class 12) */}
+        {showColleges && career.colleges && (
+          <section className="glass" style={{ padding: '30px', borderRadius: '24px' }}>
+            <h2 style={{ color: 'var(--primary-color)', marginBottom: '15px', fontSize: '1.3rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <span>🏛️</span> Top Institutions
+            </h2>
+            <ul style={{ paddingLeft: '20px', margin: 0, display: 'flex', flexDirection: 'column', gap: '10px', opacity: 0.9 }}>
+              {career.colleges.map((college, index) => (
+                <li key={index}>{college}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
         {/* Pros & Cons Section - NEW */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
           {/* Advantages */}
@@ -151,9 +164,12 @@ const CareerDetailPage = ({ career, onBack }) => {
       </div>
 
 
-      <div style={{ marginTop: '50px', textAlign: 'center' }}>
+      <div style={{ marginTop: '50px', display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
         <button className="btn-primary" onClick={onBack} style={{ padding: '15px 40px' }}>
            Explore Other Careers
+        </button>
+        <button className="btn-ai" onClick={onChatWithAI} style={{ padding: '15px 40px' }}>
+           <span>✨</span> Chat With AI
         </button>
       </div>
     </div>

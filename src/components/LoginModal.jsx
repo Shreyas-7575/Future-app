@@ -3,10 +3,26 @@ import React, { useState } from 'react';
 const LoginModal = ({ onLogin }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name && email) {
+      if (!email.toLowerCase().endsWith('@gmail.com')) {
+        setError('Please enter a valid Google email address (@gmail.com).');
+        return;
+      }
+
+      const emailUsername = email.split('@')[0];
+      if (
+        emailUsername.length < 6 || 
+        emailUsername.length > 30 || 
+        !/^[a-zA-Z0-9.]+$/.test(emailUsername)
+      ) {
+        setError('Please enter a valid Google email. This email ID is incorrect or not existing in Google.');
+        return;
+      }
+      setError('');
       onLogin({ name, email });
     }
   };
@@ -29,12 +45,21 @@ const LoginModal = ({ onLogin }) => {
         <h2 style={{ textAlign: 'center', marginBottom: '30px', color: 'var(--primary-color)' }}>Login</h2>
         
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          {error && (
+            <div style={{ color: '#ff6b6b', backgroundColor: 'rgba(255, 107, 107, 0.1)', padding: '10px', borderRadius: '8px', fontSize: '0.9rem', textAlign: 'center' }}>
+              {error}
+            </div>
+          )}
+          
           <div>
             <label style={{ display: 'block', marginBottom: '8px', fontSize: '0.9rem' }}>Name</label>
             <input 
               type="text" 
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => {
+                setName(e.target.value);
+                if (error) setError('');
+              }}
               placeholder="Enter your name"
               required
               style={{
@@ -54,8 +79,11 @@ const LoginModal = ({ onLogin }) => {
             <input 
               type="email" 
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (error) setError('');
+              }}
+              placeholder="Enter your Google email"
               required
               style={{
                 width: '100%',
